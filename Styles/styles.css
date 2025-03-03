@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* Propriedades que se aplicam a todos os elementos da página. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    margin: 0px;
+}
+
+/* Estilos para o cabeçalho. */
+header {
+    background-color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff7f;
+}
+
+.bi {
+    font-size: 20px;
+}
+.social a.bi-whatsapp,
+.social a.bi-instagram {
+    color: white;
+}
+
+/* Estilos para a seção Home. */
+#home {
+    position: relative; /* Necessário para posicionar a imagem de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px; /* Ajuste a altura conforme necessário */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a imagem não vaze do border-radius */
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imagens/imagesfundo2.webp'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); /* Escurece a imagem para melhor legibilidade do texto */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+#home h1 {
+    font-size: 36px; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto */
+}
+
+#home p {
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto */
+}
+
+/* Estilos para a seção Mapa (Localização). */
+#mapa {
+    position: relative; /* Necessário para posicionar a imagem de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px; /* Ajuste a altura conforme necessário */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a imagem não vaze do border-radius */
+}
+.mapa {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin: 20px;
+}
+
+.mapa h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.mapa p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.mapa iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a seção Diferenciais. */
+
+#diferenciais {
+    position: relative; /* Necessário para posicionar a imagem de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Ajuste a altura conforme necessário */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a imagem não vaze do border-radius */
+}
+
+.diferenciais-card {
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.diferenciais-content {
+    display: flex; /* Torna o conteúdo flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 100%;
+    max-width: 800px; /* Aumenta a largura máxima */
+}
+
+.diferenciais-imagem {
+    max-width: 40%; /* Ajusta a largura da imagem */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.diferenciais-info {
+    flex: 1; /* Permite que as informações ocupem o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.diferenciais-info h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.diferenciais-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.diferenciais-info ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Estilos para o rodapé. */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+}
+
+footer img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade para telas menores (até 768px de largura). */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+}
